@@ -1,38 +1,32 @@
-# module Searchable
+module Searchable
 
-#     # Assuming self is a PolyTree Object
-#     def dfs(target) #&prc) # recursive
+	def dfs(target)
+		return self if self.value == target
+		self.children.each do |child|
+			search_result = child.dfs(target)
+			return search_result unless search_result.nil?
+		end
+		nil
+	end
 
-#         #    A
-#         #  B   C
-#         # D E F G
+	def bfs(target) #&prc) # iterative
+		q = Queue.new
+	
+		q.enq(self)
+		until q.empty? do 
+			current = q.deq
 
-#         # target = F
-#         return self.value if self.value == target
-#         self.children.each do |child|
-#             search_result = dfs(child)
-#             return search_result.value unless search_result.nil?
-#         end
-#         nil
-        
-#     end
-    
-#     def bfs(target) #&prc) # iterative
-#         q = Queue.new
+			return current if current.value == target
+			current.children.each{|child| q.enq(child)}
+		end
+		nil
+	end
 
-#         q.enq(self)
-#         until q.empty? do 
-
-#             return self.value if self.value == target
-#             self.children.each{|child| q.enq(child)}
-#             self = q.deq
-#         end
-#         end
-
-# end
+end
 
 class PolyTreeNode
-	# include Searchable
+	include Searchable
+
 	attr_reader :value, :parent, :children
 	def initialize(value = "new_value")
     	@value = value
@@ -40,6 +34,10 @@ class PolyTreeNode
 		@children = []
 	end
 
+	def inspect
+		"#<PolyTreeNode: #{value} >"
+	end 
+	
 	def parent=(new_parent)
         if self.parent
 			old_idx_in_parent_children = self.parent.children.index(self)
