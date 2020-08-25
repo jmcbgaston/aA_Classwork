@@ -76,25 +76,42 @@ arr = [0, 1, 5, 7]
 
 # STEP 3
 # Hash map
-def two_sum?(arr, target)
-    hash = {}
-    arr.each_with_index do |ele, i|
-        if hash.has_key?(target - ele)
-            return true
-            # return [hash[target - ele], i]
-        end
-        hash[ele] = 0
-        # hash[ele] = i
-            # result = target - ele
-            # if (result.object_id != ele.object_id) && result + ele == target
-            #     return true
-            # end
-    end
-    return false
-end
+# def two_sum?(arr, target)
+#     hash = {}
+#     arr.each_with_index do |ele, i|
+#         if hash.has_key?(target - ele)
+#             return true
+#             # return [hash[target - ele], i]
+#         end
+#         hash[ele] = 0
+#         # hash[ele] = i
+#             # result = target - ele
+#             # if (result.object_id != ele.object_id) && result + ele == target
+#             #     return true
+#             # end
+#     end
+#     return false
+# end
 # hash = {14 = 0, 13 = 0, 9 = 0, 7= 0}
-arr = [0, 1, 5, 7, 7,7,7]
-p two_sum?(arr,14)
+require 'byebug'
+def two_sum?(arr, target)
+    cur_sum = arr.first
+    max_sum = arr.first
+
+    (1...arr.length).each do |i|
+        # debugger
+        cur_sum += arr[i]
+        if cur_sum > max_sum
+            max_sum = cur_sum
+        end
+        cur_sum = 0 if cur_sum < 0
+    end
+
+    max_sum
+end
+
+arr = [2, 3, -6, 7, -6, 7]
+p two_sum?(arr, 8)
 # hash = { k=v, k=v, k=v }
 # hash = { 0=x, 1=x, 5=x, 7=x }
 # arr.each do |ele|
