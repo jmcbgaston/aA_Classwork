@@ -2,7 +2,7 @@ class AttrAccessorObject
 
   def self.my_attr_accessor(*names)
     # my_attr_accessor([name, height, weight, ...])
-    
+
     # goes through names of accessors
     names.each do |name|
       # define_method of the given name
