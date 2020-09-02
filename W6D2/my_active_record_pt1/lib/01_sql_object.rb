@@ -54,7 +54,24 @@ class SQLObject
   end
 
   def self.finalize!
-    # ...
+    # when we call this method,
+    # self will then have access to our:
+    #   getter 
+    #   setter
+
+    # We can call on the table names using our previously made columns method
+
+    self.columns.each do |table_name|
+
+      define_method(table_name) do |table_name|
+        self.attributes[table_name]
+      end
+
+      define_method("#{table_name}=") do |value|
+        self.attributes[table_name] = value
+      end
+
+    end
   end
 
   def self.table_name=(table_name)
@@ -95,7 +112,8 @@ class SQLObject
   end
 
   def attributes
-    # ...
+    # using 
+    @attributes ||= {}
   end
 
   def attribute_values
