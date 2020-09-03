@@ -1,0 +1,64 @@
+/* PHASE 2: Notifications */
+
+/* to make a badge, we need to append it to wherever we want it to appead. Today, we want it to happen on the notifications tab */
+
+/* we will first create a badge class */
+
+.badge {
+    /* lets make sure that the display is inline  */
+    display: inline;
+    /* set a font smaller than our main  */
+    font-size: 14px;
+    /* have some padding on length then width  */
+    padding: 1px 6px;
+    /* set a background color onto the badge  */
+    background: black;
+    /* create a border radius for the badge itself  */
+    border-radius: 50%;
+}
+
+/* when we hover over the badge list items we want to see a color  */
+
+li:hover .badge {
+    /* change the badge color when we hover onto it  */
+    background: red
+}
+
+.header {
+    position: relative;
+    z-index: 1;
+}
+
+
+  
+.header-list > li {
+    position: relative;
+}
+  
+.header-notifications {
+    display: none;
+    position: absolute;
+    left: -1px;
+    font-size: 14px;
+    white-space: nowrap;
+    background: #fff;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+}
+
+li:hover .header-notifications {
+    display: block;
+}
+
+.header-notifications > li {
+    border-top: 1px solid #ccc;
+    color: #000;
+}
+
+.header-notifications > li:hover {
+    background: #eee;
+}

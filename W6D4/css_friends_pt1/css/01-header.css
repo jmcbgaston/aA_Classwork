@@ -1,0 +1,71 @@
+/* PHASE 1: Header */
+
+/* add out google styling font into body */
+/* create a default font size, weight */
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background: whitesmoke;
+  }
+  
+/* give a background color to the header */
+/* set font color */
+
+  .header {
+    background: red;
+    color: whitesmoke;
+    border-bottom: 1px solid whitesmoke;
+  }
+  
+  /* at our anchors, lets make them blocks with some padding */
+
+  .header a {
+    display: block;
+    padding: 10px 20px;
+  }
+  
+/* lets set our navigation list to have some borders  */
+/* the border will give a seperation with the color  */
+
+  .header-nav {
+    margin: 0 auto;
+    width: auto;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+  }
+
+/* we want the logo on the left so we float it to left  */
+/* we also want it to be more bold  */
+  
+  .header-logo {
+    float: left;
+    border-right: 1px solid whitesmoke;
+    font-weight: 700;
+  }
+
+/* we also want the logo to have some hover color in it so we add the hover action onto it */
+  
+  .header-logo:hover {
+    background: #000;
+  }
+  
+/* float the list class to the right  */
+
+  .header-list {
+    float: right;
+  }
+
+/* float each element to the left to make it all be in the inline block  */
+  
+  .header-list > li {
+    float: left;
+    border-left: 1px solid whitesmoke;
+  }
+
+/* lets make our hover color black */
+  
+  .header-list > li:hover {
+    background: black;
+  }

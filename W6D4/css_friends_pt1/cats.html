@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>App Academy Friends | PHASE 1: Header</title>
+
+  <!-- in here we can add a stylesheet from google fonts -->
+
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,700" type="text/css">
+
+  <!-- use the following links to set our styles -->
+  <link rel="stylesheet" href="css/00-reset.css" type="text/css">
+  <link rel="stylesheet" href="css/01-header.css" type="text/css">
+  <link rel="stylesheet" href="css/02-notifications.css" type="text/css">
+</head>
+<body>
+
+  <!-- to give better access to the css file, let's make some classes so that we can hit specific elements witht he styling that we want -->
+  <header class="header">
+    <nav class="header-nav group">
+
+      <!-- <a href="#"> will prevent a page reload -->
+      <h1 class="header-logo">
+        <a href="#">App Academy Friends</a>
+      </h1>
+
+      <ul class="header-list">
+
+<!-- to add in this badge class, we'll add it into our list element of notification  -->
+
+        <li>
+          <a href="#">Notifications
+            <strong class='badge'>3</strong>
+          </a>
+
+          <ul class="header-notifications">
+            <li>
+              <a href="#">
+                Person1 liked your face
+              </a>
+              </li>
+            <li>
+              <a href="#">
+                Person2 waves at you
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Person1 left the room
+              </a>
+            </li>
+          </ul>
+        
+        
+        </li>
+
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+</body>
+</html>
