@@ -1,0 +1,17 @@
+<h2>Log In to Music App<h2>
+<form action="<%= session_url%>" method= "POST">
+    <label>
+        email:
+        <input type="text" name="user[email]"
+        value="">
+    </label>
+    <label>
+        password:
+        <input type="password" name="user[password]"
+        value="">
+    </label>
+        <% if flash[:errors] %>
+        <h3><%= @user.errors.full_messages %></h3>
+        <% end %>
+    <input type="submit" value="login">
+</form>
