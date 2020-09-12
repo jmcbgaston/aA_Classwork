@@ -1,0 +1,17 @@
+div {
+    padding: 10px 100px 10px 100px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.section {
+    list-style: none;
+    display: flex;
+    // flex-direction: row;
+    justify-content: space-around;
+}
+
+.section li:hover {
+    background-color: whitesmoke;
+    text-decoration: underline;
+    cursor: pointer;
+}

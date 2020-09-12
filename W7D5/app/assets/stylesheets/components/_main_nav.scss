@@ -1,0 +1,72 @@
+.main-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: solid gainsboro 1px;
+}
+
+.left-nav > ul,
+.right-nav > ul {
+    padding: 5px 0px 15px 0px;
+}
+
+.left-nav > ul > li {
+    display: inline-block;
+    padding: 12px;
+}
+
+.right-nav > ul > li {
+    background-color: navy;
+    border: none;
+    color: white;
+    padding: 10px 12px;
+    text-align: center;
+    text-decoration: none;
+    // display: inline-block;
+    font-size: 12px;
+    margin: 2px 1px;
+    cursor: pointer;
+    
+    display: inline-block;
+    flex-direction: column;
+    align-self: flex-end;
+}
+
+.right-nav > ul > li:last-of-type {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 10px 12px;
+    text-align: center;
+    text-decoration: none;
+    // display: inline-block;
+    font-size: 12px;
+    // margin: 2px 1px;
+    // justify-content: flex-end;
+    cursor: pointer;
+    
+}
+
+.left-nav > ul > li:hover {
+    transition-duration: 0.4s;
+    background-color: lightgray;
+}
+
+.right-nav > ul > li:hover {
+    transition-duration: 0.4s;
+    background-color: rgb(100, 186, 214);
+}
+
+.right-nav > ul > li:last-of-type:hover {
+    transition-duration: 0.4s;
+    background-color: lightgray;
+}
+
+.left-nav span {
+
+}
+
+
+.right-nav i {
+
+}
