@@ -1,19 +1,52 @@
 // Use the gear_dropdown.png screenshot as a style guide
 
-.editions {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+
+.hidden {
+    display: none;
+    
 }
 
-.dropdown-subtitle {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.gear-dropdown {
+    position: absolute;
+    top: 45px;
+    background-color: white;
+    box-shadow: -1px 4px 6px 1px rgba(0, 0, 0, 0.09);
 }
 
-.help {
+.editions li a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    font-size: 8px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    padding: 2px 0px 2px 0px;
+}
+
+.editions li a:hover {
+    background-color: darkgray;
+}
+
+.help li a {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 8px;
+    // text-transform: uppercase;
+    margin-bottom: 2px;
+    padding: 2px 0px 2px 0px;
+    color: cornflowerblue;
+}  
+
+.help li a:hover {
+    text-decoration: underline;
+}
+
+.dropdown-subtitle{
+    display: flex;
+    justify-content: flex-start;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 3px 0px 3px 0px;
+    // font-weight: 5;
 }
