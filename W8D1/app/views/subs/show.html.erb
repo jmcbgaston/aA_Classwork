@@ -1,0 +1,13 @@
+<h1> <%= @subs.title %> </h1>
+
+
+<h3>Description</h3>
+<%= @subs.description %>
+
+<label><a href="<%= new_post_url %>">Make a new post</a> </label>
+
+<% @user.posts.each do |post| %>
+    <a href="<%= post_url(@user) %>"> <%= post.title %> </a>
+<% end %>
+
+<button> <a href="<%= edit_sub_url %>">Edit</a></button>

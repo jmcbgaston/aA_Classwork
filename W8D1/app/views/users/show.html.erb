@@ -1,0 +1,6 @@
+<h2>Welcome <%= @user.username %></h2>
+
+<% @user.subs.each do |sub| %>
+    <a href="<%= sub_url(@user) %>"> <%= sub.title %> </a>
+<% end %>
+
