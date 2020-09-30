@@ -1,0 +1,24 @@
+#main {
+    font-family: 'Monoton', cursive;
+}
+
+/* .clock > h1{
+    background-color: transparent;
+} */
+
+.clockItems {
+    background-color: yellow;
+}
+
+.clockItems > h2 {
+    /* background-color: yellow; */
+    display: inline-flex;
+    width: 79%;
+}
+.clockItems > h3{
+    /* background-color: yellow; */
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 7%
+}
