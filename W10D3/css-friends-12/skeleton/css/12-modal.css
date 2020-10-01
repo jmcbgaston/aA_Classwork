@@ -1,0 +1,33 @@
+/* PHASE 12: Modal */
+
+.modal {
+    /* display: none; */
+}
+
+.modal.is-open {
+    display: block;
+}
+
+.modal-screen {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.8);
+    /* The 0.8 alpha will make it slightly see-through. */
+}
+
+.modal-form {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -220px;
+    width: 360px;
+    padding: 20px;
+    background: white;
+    z-index: 3;
+}
+
+/* Position the .modal-form absolute, using the centering trick from earlier. Style it reusing the .input and .submit classes you created. */

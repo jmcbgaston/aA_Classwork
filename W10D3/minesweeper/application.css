@@ -1,0 +1,41 @@
+.grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    /* border-style: inset; */
+    border: black;
+    justify-content: center;    
+    align-content: center; 
+    margin: auto;
+    overflow: auto;
+}
+
+.revealed {
+    border-style: inset;  
+    background: white;
+    width: 20px;
+    height: 20px;  
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.revealed-bomb {
+    border-style: inset;  
+    background: red;
+    width: 20px;
+    height: 20px;  
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.unrevealed {
+    border-style: outset;
+    background: gray;
+    width: 20px;
+    height: 20px;
+}
